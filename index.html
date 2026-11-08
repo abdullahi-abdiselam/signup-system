@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="auth-card">
+    <div class="brand-mark">LS</div>
+    <h1>Welcome</h1>
+    <p class="subtitle">Login to your account or create a new one</p>
+
+    <div class="tabs" role="tablist" aria-label="Authentication">
+      <button class="tab active" id="loginTab" type="button">Login</button>
+      <button class="tab" id="signupTab" type="button">Sign Up</button>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <label for="loginEmail">Email address</label>
+      <input id="loginEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" placeholder="Enter your password" autocomplete="current-password"
+        required>
+      <button class="submit-btn" type="submit">Login</button>
+    </form>
+
+    <form id="signupForm" class="hidden" novalidate>
+      <label for="fullName">Full name</label>
+      <input id="fullName" type="text" placeholder="Your full name" autocomplete="name" required>
+      <label for="signupEmail">Email address</label>
+      <input id="signupEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <label for="signupPassword">Password</label>
+      <input id="signupPassword" type="password" placeholder="At least 8 characters" autocomplete="new-password"
+        minlength="8" required>
+      <label for="confirmPassword">Confirm password</label>
+      <input id="confirmPassword" type="password" placeholder="Enter password again" autocomplete="new-password"
+        required>
+      <button class="submit-btn" type="submit">Create Account</button>
+    </form>
+
+    <p id="message" class="message" aria-live="polite"></p>
+    <section id="dashboard" class="dashboard hidden">
+      <h2 id="welcomeText">You are logged in!</h2>
+      <p>This is a demo dashboard.</p>
+      <button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+    </section>
+    <p class="footnote">Demo project • HTML, CSS & JavaScript</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
